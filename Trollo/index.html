@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Trollo</title>
+
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.css'>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<div class="layout">
+		<nav class="navbar trollo">Trollo</nav>
+		<nav class="navbar board">Tablica</nav>
+		<form method="POST" id="refresh" action="/">
+			<button name="przycisk" onclick="refresh()">Odswiez</button>
+		</form>
+		<div id="lists" class="lists">
+			<div class="list">
+				<header>Backlog</header>
+				<ul id="card1">
+					<li class="list-card">
+						<form method="post" id="randomForm" action="/">
+							Tytuł:
+							<input type="text" name="title">
+							<br> Karta:
+							<input type="text" name="content">
+							<br>
+							<input type="button" value='Dodaj kartę' onclick="postToServer()">
+						</form>
+					</li>
+					<li class="list-card">Utworzyć i skonfigurować serwer (Node.js)</li>
+					<li class="list-card">Utworzyć i skonfigurować bazę danych NoSQL (MongoDB)</li>
+				</ul>
+				<footer>Dodaj kartę...</footer>
+
+			</div>
+			<div class="list">
+				<header>Do zrobienia</header>
+				<ul id="card2">
+					<li class="list-card">Zmienić kod UI na dynamiczny</li>
+					<li class="list-card">Poprawić wszystkie błędy</li>
+					<li class="list-card">Optymalizacja kodu i poprawa konwersji</li>
+					<li class="list-card">
+						Karta 1
+					</li>
+					<li class="list-card">Ustawić płynną współpracę wszystkich środowisk</li>
+					<li class="list-card">Poczytać o HTTP Module (Node.js)</li>
+					<li class="list-card">
+						Karta 2
+					</li>
+					<li class="list-card">Zainstalować MongoDB</li>
+					<li class="list-card">Utworzyć kolekcję: db.createCollection("card")</li>
+					<li class="list-card">Poczytać o operacjach CRUD (MongoDB)</li>
+				</ul>
+				<footer>Dodaj kartę...</footer>
+			</div>
+			<div class="list">
+				<header>W trakcie</header>
+				<ul id="card3">
+					<li class="list-card">Zoptymalizować projekt graficzny</li>
+					<li class="list-card">Napisać metodę dodającą/usuwającą karty</li>
+				</ul>
+				<footer>Dodaj kartę...</footer>
+			</div>
+			<div class="list">
+				<header>Testowanie</header>
+				<ul id="card4">
+					<li class="list-card">Błąd klasy "navbar trollo"</li>
+					<li class="list-card">
+						Screenshot
+					</li>
+				</ul>
+				<footer>Dodaj kartę...</footer>
+			</div>
+			<div class="list">
+				<header>Zrobione</header>
+				<ul id="card5">
+					<li class="list-card">Zaimplementować metodę drag & drop</li>
+					<li class="list-card">Wykorzystać holder.js do renderowania grafik</li>
+				</ul>
+				<footer>Dodaj kartę...</footer>
+			</div>
+		</div>
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js'></script>
+	<script src="index.js"></script>
+
+
+
+
+</body>
+
+</html>
